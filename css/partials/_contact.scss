@@ -1,0 +1,134 @@
+#contact {
+	position: relative;
+	background-color: $contactColor;
+}
+
+#contact::before {
+	@extend %triangle-before;
+	@extend %triangle-before-style;
+	border-color: transparent transparent $contactColor transparent;
+}
+
+.contactWrapper {
+	padding: $gutter;
+	padding-top: $gutter / 2;
+}
+
+.titleWrapper {
+	padding-top: $gutter / 2;
+}
+
+.personalContact {
+	display: flex;
+	flex-direction: column;
+}
+
+.contactHook  {
+	text-align: center;
+	font-size: $baseFontSize * 2;
+}
+
+label {
+	font-family: 'Open-Sans', sans-serif;
+}
+
+input[type="text"], input[type="email"], textarea {
+	border: 1px black solid;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+input[type="text"], input[type="email"] {
+	height: 35px;
+}
+
+.formWrapper {
+	display: flex;
+}
+
+form {
+	margin: auto;
+	text-align: center;
+}
+
+form ul > li, textarea {
+	margin-top: 5px;
+}
+
+form ul > li {
+	list-style-type: none;
+	text-transform: uppercase;
+}
+
+input[type="submit"] {
+    border-radius: 5px;
+    text-transform: uppercase;
+}
+
+img.cnTower {
+	height: 100px;
+	width: 100px;
+	margin: auto;
+}
+
+img.cnTower:hover {
+	-webkit-animation: twirl 1s infinite;
+	animation: twirl 1s infinite;
+	-ms-animation: twirl 1s infinite;
+	mso-animation: twirl 1s infinite;
+	-moz-animation: twirl 1s infinite;
+	-o-animation: twirl 1s infinite;
+}
+
+@-webkit-keyframes twirl {
+	0% {
+		transform: rotateY(0deg);
+		-webkit-transform: rotateY(0deg);
+		-ms-transform: rotateY(0deg);
+		mso-transform: rotateY(0deg);
+		-moz-transform: rotateY(0deg);
+		-o-transform: rotateY(0deg);
+	}
+
+	100% {
+		transform: rotateY(360deg);
+		-webkit-transform: rotateY(360deg);
+		-ms-transform: rotateY(360deg);
+		mso-transform: rotateY(360deg);
+		-moz-transform: rotateY(360deg);
+		-o-transform: rotateY(360deg)
+	}
+}
+
+.personalContactWrapper {
+	text-align: center;
+	font-size: $baseFontSize * 2.5;
+}
+
+.reachOut {
+	display: flex;
+}
+
+.reachOut a, .personalContactWrapper a {
+	text-decoration: underline;
+	margin: auto;
+}
+
+.twitterSvg {
+	height: 32px;
+	width: 32px;
+	margin: 20px;
+}
+
+.contactIcon {
+	transition: all 0.6s linear;
+}
+
+.contactIcon:hover {
+	transform: scale(2);
+	-webkit-transform: scale(2);
+	-ms-transform: scale(2);
+	mso-transform: scale(2);
+	-moz-transform: scale(2);
+	-o-transform: scale(2);
+}

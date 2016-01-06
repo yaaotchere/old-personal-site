@@ -1,0 +1,126 @@
+#aboutMe {
+	background-color: $aboutColor;
+	position: relative;
+}
+
+#aboutMe::before {
+	@extend %triangle-before;
+	@extend %triangle-before-style;
+	border-color: transparent transparent $aboutColor transparent;
+}
+
+#aboutMe::after {
+	@extend %triangle-after;
+	@extend %triangle-after-style;
+	border-color: $aboutColor transparent transparent transparent;
+}
+
+h4.aboutMe {
+	padding-top: $gutter / 2;
+}
+
+.skillWrapper, .skillContainer, .skillBlurbWrapper {
+	display: flex;
+}
+
+.skillContainer {
+	margin: auto;
+	padding-top: $gutter;
+	width: 900px;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.cardHolder {
+	width: 300px;
+}
+
+.card {
+	width: 250px;
+	height: 250px;
+	position: relative;
+	-webkit-perspective: 500;
+	text-align: center;
+}
+
+.front, .back {
+	position: absolute;
+    height: 100%;
+    width: 100%;
+    transition: all 0.5s;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -o-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
+    mso-backface-visibility: hidden;
+    border-radius: 100%;
+}
+
+.front {
+	background-color: #D94C3B;
+}
+
+.back {
+	background-color: $brightSun;
+	-webkit-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+	-o-transform: rotateY(180deg);
+	mso-transform: rotateY(180deg);
+	-ms-transform: rotateY(180deg);
+}
+
+.back p {
+	color: black;
+	margin-top: $gutter / 1.5;
+	font-size: $baseFontSize * 1.5;
+}
+
+.card:hover .back {
+    -webkit-transform: rotateY(0deg);
+	transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-o-transform: rotateY(0deg);
+	mso-transform: rotateY(0deg);
+	-ms-transform: rotateY(0deg);
+}
+
+ .card:hover .front {
+    -webkit-transform: rotateY(-180deg);
+	transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-o-transform: rotateY(-180deg);
+	mso-transform: rotateY(-180deg);
+	-ms-transform: rotateY(-180deg);
+}
+
+.svg {
+	height: 60px;
+	width: 60px;
+	margin-top: 40px;
+}
+
+.sing {
+	height: 90px;
+	width: 80px;
+}
+
+h5 {
+	margin-bottom: 0px;
+	color: white;
+}
+
+.karaoke {
+	margin-top: -10px
+}
+
+.skillBlurbWrapper {
+	padding: $gutter;
+	font-size: $baseFontSize * 2;
+}
+
+.skillBlurbTitle {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	flex: 2 0 300px;
+}

@@ -1,0 +1,40 @@
+#portfolio {
+	background-color: $portfolioColor;
+}
+
+.portfolioWrapper {
+	padding: $gutter;
+}
+
+.portfolioContent {
+	display: flex;
+	justify-content: space-around;
+	margin: 80px 0;
+}
+
+.portfolioContent a, .portfolioContent a:visited {
+	color: black;
+	text-decoration: none;
+}
+
+.portfolioItem {
+	height: 250px;
+	width: 300px;
+	background-color: $brightSun;
+	position: relative;
+}
+
+.portfolioItem:hover {
+	box-shadow: 10px 10px 0px $contactColor;
+}
+
+.portfolioItem img {
+	max-width: 100%;
+	max-height: 100%;
+	float: left;
+	margin-bottom: 10px;
+}
+
+.overlayText {
+	padding: 20px;
+}

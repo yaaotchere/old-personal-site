@@ -1,0 +1,188 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	//index
+	.headerTitleWrapper {
+		position: absolute;
+		top: 300px;
+		z-index: 500;
+	}
+
+	h1 {
+		font-size: $baseFontSize * 4.5;
+	}
+
+	h2 {
+		font-size: $baseFontSize * 2;
+	}
+	
+	//about
+	h5 {
+		font-size: $baseFontSize * 1.5;
+	}
+
+	.skillBlurbWrapper {
+		flex-direction: column;
+	}
+
+	.skillBlurbTitle {
+		padding-bottom: $gutter;
+		flex: 2 0 115px;
+	}
+
+	#aboutMe::after {
+		left: -260px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	//index
+	.nav {
+		font-size: $baseFontSize * 1.5;
+		height: 70px;
+	}
+
+	nav ul li a {
+		padding: 40px;
+	}
+
+	.headerTitleWrapper {
+		position: absolute;
+		top: 345px;
+		z-index: 500;
+	}
+
+	h3 {
+		display: none;
+	}
+
+	//about
+	h4 {
+		font-size: $baseFontSize * 4;
+	}
+
+	.skillContainer {
+		flex-direction: row;
+	}
+
+	.skillHolder {
+		padding: $gutter / 2;
+	}
+
+	.skill {
+		width: 200px;
+		height: 200px;
+	}
+
+	.svg {
+		height: 100px;
+		width: 80px;
+	}
+
+	.skillBlurbTitle {
+		flex-basis: 130px;
+	}
+
+	#aboutMe::after {
+		left: -370px;
+	}
+
+	//portfolio
+	.portfolioContent {
+		max-width: 500px;
+		flex-wrap: wrap;
+		margin: auto;
+	}
+
+	.portfolioItemB {
+		margin-top: $gutter;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	//index small screen
+	
+	.nav {
+		box-shadow: 1px 0px 10px #000;
+		position: fixed;
+		bottom: 0px;
+	}
+
+	nav ul li a {
+		padding: 24px;
+		font-size: 18px;
+	}
+
+	.headerTitleWrapper {
+		top: 365px;
+	}
+
+	h1 {
+		font-size: $baseFontSize * 4;
+		padding-left: $gutter / 4;
+	}
+
+	h2 {
+		display: none;
+	}
+
+	//about section small screen
+	#aboutMe::before {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 400px 71px 141px;
+		border-color: transparent transparent $aboutColor transparent;
+	}
+
+	.titleWrapper {
+		padding-top: 0px;
+	}
+
+	.cardHolder, .skillBlurbWrapper {
+		padding: $gutter / 4;
+	}
+
+	.cardHolder {
+		height: 300px;
+	}
+
+	.skillBlurbTitle {
+		padding-right: 0px;
+	}
+
+	#aboutMe::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 0;
+		left: -620px;
+		border-style: solid;
+		border-color: $aboutColor transparent transparent transparent;
+	}
+
+	//portfolio
+	h4.portfolio {
+		padding-top: $gutter;
+	}
+
+	.portfolioContent {
+		padding: 80px 0px;
+	}
+
+	//contact
+	.contactWrapper {
+		padding-top: $gutter;
+	}
+}
+
+/* iPhone 4 */
+@media (max-width: 320px) {
+	nav ul li a {
+		padding: 12px;
+		font-size: 14px;
+	}
+}

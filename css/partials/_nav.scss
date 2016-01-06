@@ -1,0 +1,43 @@
+nav {
+	position: fixed;
+	z-index: 999;
+	width: 100%;
+	background: black;
+	display: flex;
+	height: 55px;
+		ul {
+		display: flex;
+		margin: auto;
+
+		li {
+			list-style-type: none;
+			a {
+				padding: 60px;
+				padding-bottom: 6px;
+				font-size: $baseFontSize * 2;
+				text-decoration: none;
+				color: white;
+				}
+		}
+	}
+}
+
+.homeNav a, .aboutNav a, .portfolioNav a, .contactNav a {
+	transition: color 0.5s;
+}
+
+.homeNav a:hover {
+	color: $altColor;
+}
+
+.aboutNav a:hover {
+	color: $aboutColor;
+}
+
+.portfolioNav a:hover {
+	color: $portfolioColor;
+}
+
+.contactNav a:hover {
+	color: $contactColor;
+}

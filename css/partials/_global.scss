@@ -1,0 +1,107 @@
+%section-titles {
+	font-weight: 700;
+	font-size: $baseFontSize * 4.5;
+	text-transform: uppercase;
+	margin: auto;
+	display: flex;
+}
+
+%triangle-before, %triangle-after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+%triangle-before-style {
+	top: - 70px;
+	border-width: 0 1200px 70px 200px;
+}
+
+%triangle-after-style {
+	bottom: -70px;
+	border-width: 70px 400px 0 1000px;
+}
+
+html, body {
+	overflow-x: hidden;
+	font-family: 'Open-Sans', sans-serif;
+}
+
+header {
+	background-image: url('../images/PAM_0098.jpg');
+	background-size: cover;
+	-webkit-background-size: cover;
+	-ms-background-size: cover;
+	mso-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-position: top center;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+    flex-direction: column;
+}
+
+h1 {
+	@extend %section-titles;
+	font-size: $baseFontSize * 6;
+}
+
+h2 {
+	font-size: $baseFontSize * 2;
+}
+
+h1, h2 {
+	padding-left: $gutter;
+}
+
+span.yaa {
+
+	font-weight: 300;
+}
+
+.titleWrapper {
+	display: flex;
+}
+
+h3 {
+    font-family: 'Satisfy', cursive;
+    color: white;
+    padding-left: 20px;
+    margin: 0;
+    position: absolute;
+    top: 10px;
+    position: fixed;
+    z-index: 999;
+    transition: color 1s;
+}
+
+h3:hover {
+	color: rebeccapurple;
+}
+
+.titleWrapper {
+	padding-top: $gutter / 2;
+}
+
+h4 {
+	@extend %section-titles;
+}
+
+h6 {
+	margin: 0;
+}
+
+.icons a:visited {
+	color: black;
+}
+
+footer {
+	background-color: $contactColor;
+	text-transform: uppercase;
+	font-size: $baseFontSize / 1.5;
+	text-align: right;
+	padding-right: 10px;
+}
